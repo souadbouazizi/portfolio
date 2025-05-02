@@ -1,0 +1,146 @@
+export const meta = {
+  title: "React Server Components in Next.js 14",
+  author: "Souad",
+  date: "2025-04-01",
+  summary: "Deep dive into React Server Components implementation in Next.js 14",
+}
+
+# React Server Components in Next.js 14
+
+**Next.js 14** introduces stable support for React Server Components (RSCs), fundamentally changing how we build performant React applications.
+
+---
+
+## 1. Core Concepts
+
+### Server Components vs Client Components
+
+- **Server Components**:  
+  - Render exclusively on the server  
+  - Zero bundle size impact  
+  - Direct database/API access  
+
+- **Client Components**:  
+  - Marked with `'use client'` directive  
+  - Handle interactivity  
+  - Access browser APIs  
+
+---
+
+## 2. Basic Implementation
+
+### Component Structure
+
+```jsx
+// app/page.js (Server Component)
+import ClientCounter from './ClientCounter';
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Server Component</h1>
+      <ClientCounter />
+    </div>
+  );
+}
+```
+
+```jsx
+// app/ClientCounter.js
+'use client';
+
+import { useState } from 'react';
+
+export default function ClientCounter() {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(c => c + 1)}>Count: {count}</button>;
+}
+```
+
+---
+
+## 3. Key Benefits
+
+### Performance Optimization
+
+- 40–70% reduced client bundle size  
+- Faster initial page load  
+
+### Security
+
+- Sensitive logic stays server-side  
+- Database credentials never exposed  
+
+### Efficient Data Fetching
+
+```jsx
+async function UserData({ userId }) {
+  const data = await db.query(userId);
+  return <Profile data={data} />;
+}
+```
+
+---
+
+## 4. Common Patterns
+
+### Shared Server/Client Layouts
+
+```jsx
+// app/layout.js
+export default async function RootLayout({ children }) {
+  const user = await getCurrentUser();
+
+  return (
+    <html>
+      <body>
+        <Navbar user={user} />
+        {children}
+      </body>
+    </html>
+  );
+}
+```
+
+---
+
+## 5. Migration Strategy
+
+### Identify Interactive Components
+
+Audit components using:
+
+- `useState` / `useEffect`  
+- Browser APIs  
+- Event handlers  
+
+### Incremental Adoption
+
+- Start with leaf components  
+
+### Performance Monitoring
+
+- Use Next.js Analytics  
+
+---
+
+## 6. Best Practices
+
+### Separation of Concerns
+
+- Keep server components for data loading  
+- Use client components for UI interactions  
+
+### Cache Strategically
+
+```jsx
+fetch(url, { next: { revalidate: 3600 } });
+```
+
+### Error Handling
+
+- Implement error boundaries for client components  
+
+---
+
+React Server Components represent a paradigm shift in React development. By leveraging Next.js 14's implementation, developers can build faster, more secure applications while maintaining React's signature developer experience.

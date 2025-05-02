@@ -1,0 +1,27 @@
+
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+  place-content: center;
+  place-items: stretch;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-lg) 0;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  margin-top: 8rem;
+  font-size: var(--font-size-lg);
+}
+
+.projects-grid .button {
+  margin: 0 auto;
+  background-color: var(--color-bg);
+}
