@@ -32,7 +32,7 @@ const Card = ({ title, description, thumbnail, url }: CardProps) => {
               variant="primary"
               icon={Eye}
               size="small"
-              style={{ backgroundColor: "#0E184A", fontSize: "1rem" }}
+              
             />
           </a>
         </div>
@@ -45,7 +45,7 @@ const Card = ({ title, description, thumbnail, url }: CardProps) => {
             style={{
               background: "none",
               border: "none",
-              color: "#0E184A",
+              color: "#00ffcc",
               cursor: "pointer",
               padding: 0,
               fontWeight: "bold",
