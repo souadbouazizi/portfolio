@@ -4,6 +4,7 @@ import Link from "next/link"
 import type { Blog } from "@/lib/types"
 import styles from "@/styles/modules/blog.module.css"
 import { use } from "react"
+import { Button } from "@/components/ui/button"
 
 interface BlogListProps {
   blogs: Promise<Blog[]>
@@ -34,6 +35,7 @@ const BlogList = ({ blogs, sortOrder }: BlogListProps) => {
               <span>{blog.frontmatter.author}</span>
               <time>{blog.frontmatter.date}</time>
             </div>
+            <Button title="see more" />
           </li>
         </Link>
       ))}

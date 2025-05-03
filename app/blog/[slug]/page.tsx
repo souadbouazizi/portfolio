@@ -4,6 +4,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb"
 import type { Frontmatter } from "@/lib/types"
 import type { Metadata } from "next"
 
+
 export async function generateMetadata({
   params
 }: { params: Promise<{ slug: string }> }) {
@@ -91,6 +92,7 @@ export default async function Slug({
         <div data-slot="blog-details">
           <span data-slot="blog-author" style={{fontWeight:"500"}}>{Frontmatter.author}</span>
           <time data-slot="blog-date">{Frontmatter.date}</time>
+         
         </div>
         <p data-slot="blog-summary">{Frontmatter.summary}</p>
       </div>

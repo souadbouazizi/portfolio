@@ -34,7 +34,7 @@ export default async function Blog({
           alignItems: "center",
           marginBottom: ".5rem",
           width: "100%",
-          maxWidth: "40vw"
+          maxWidth: "100vw"
         }}
       >
         <h2>Our Blogs</h2>
