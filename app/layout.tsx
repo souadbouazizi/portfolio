@@ -34,7 +34,7 @@ export default function RootLayout({
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   {/* <!-- Open Graph (partage réseaux sociaux) --> */}
-  <meta property="og:title" content="Front-End React Developer | My Portfolio" />
+  <meta property="og:title" content="Front-End React Developer | Souad BOUAZIZI Portfolio" />
   <meta property="og:description" content="I'm a front-end developer specializing in React.js. Check out my projects and skills." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://myportfolio.com" />
@@ -42,7 +42,7 @@ export default function RootLayout({
 
   {/* <!-- Twitter Card --> */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Front-End React Developer | My Portfolio" />
+  <meta name="twitter:title" content="Front-End React Developer | Souad BOUAZIZI Portfolio" />
   <meta name="twitter:description" content="Passionate React developer. Discover my projects and expertise." />
   <meta name="twitter:image" content="https://myportfolio.vercel.app/imgfile/hero.jpg" />
 
