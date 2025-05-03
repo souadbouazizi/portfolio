@@ -5,7 +5,7 @@
   --color-bg: #0c0c0c ;
   --color-text: #f1f1f1;
   --color-card: #1e1e3f;
-  --color-muted: #eceff4 ;
+  --color-muted: #00ffcc ;
 
 
   --font-size-lg: 2.5rem;
@@ -21,10 +21,10 @@
 
   @media (prefers-color-scheme: dark) {
     & {
-      --color-bg: #1f0840;
-      --color-text: #dcd9ec;
-      --color-card: #7b0080;
-      --color-muted: #541c8c ;
+      --color-bg: #0c0c0c ;
+      --color-text: #f1f1f1;
+      --color-card: #1e1e3f;
+      --color-muted: #00ffcc ;
        }
   }
 
@@ -195,6 +195,7 @@ main {
     min-height: 100vh;
     width: 100%;
     max-width: var(--max-width);
+    margin-top: 80px;
 
     scroll-snap-align: start;
     scroll-snap-stop: always;

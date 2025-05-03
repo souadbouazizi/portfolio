@@ -6,8 +6,8 @@
 .blog-sort {
   display: flex;
   border-radius: var(--radius);
-  background-color: var(--color-card);
-  border: 2px solid var(--color-muted);
+  background-color: var(--color-text);
+  border: 2px solid var(--color-primary);
   overflow: hidden;
   position: relative;
   padding: var(--spacing-sm);
@@ -39,7 +39,7 @@
     align-items: center;
     gap: var(--spacing-md);
     padding: var(--spacing-sm);
-    background-color: transparent;
+    background-color: var( --color-muted);
     border-radius: var(--radius);
     border: none;
     cursor: pointer;
