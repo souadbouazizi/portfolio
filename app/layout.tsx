@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
   {/* <!-- Balises générales --> */}
-  <title>Front-End React Developer | My Portfolio</title>
+  <title>Front-End React Developer | Souad BOUAZIZI Portfolio</title>
   <meta name="description" content="I'm a front-end developer specializing in React.js. Learn more about my projects, skills, and experience." />
   <meta name="keywords" content="front-end developer, React, React.js, portfolio, JavaScript, web developer, HTML, CSS, Bootstrap, TailwindCSS, projets web" />
   <meta name="author" content="Souad BOUAZIZI" />
