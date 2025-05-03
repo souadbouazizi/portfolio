@@ -40,3 +40,6 @@
   padding: var(--spacing-md) var(--spacing-lg);
   min-height: 120px;
 }
+.textarea::placeholder {
+  color: var(--color-text)
+}

@@ -9,7 +9,7 @@
 
 
   --font-size-lg: 2.5rem;
-  --font-size-md: 1.5rem;
+  --font-size-md: 1.2rem;
   --font-size-sm: 1rem;
 
   --spacing-sm: 0.5rem;
@@ -225,8 +225,8 @@ main {
 }
 
 footer {
-  background-color: var(--color-bgNav);
-  color: var(--color-muted);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   border-top: 1px solid var(--color-muted);
   border-radius: var(--radius) var(--radius) 0 0;
   padding: var(--spacing-md) 0;
@@ -252,7 +252,7 @@ footer {
     flex-flow: row;
 
     span {
-      color: var(--color-muted);
+      color: var(--color-primary);
       filter: drop-shadow(0 0 4px var(--color-muted));
     }
   }
@@ -264,7 +264,7 @@ footer {
     gap: var(--spacing-md);
 
     &:last-child a {
-      color: var(--color-muted);
+      color: var(--color-primary);
       opacity: 1;
       isolation: isolate;
     }

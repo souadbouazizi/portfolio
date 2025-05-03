@@ -35,3 +35,6 @@
   font-size: var(--font-size-lg);
   padding: var(--spacing-md) var(--spacing-lg);
 }
+.input::placeholder {
+  color: var(--color-text)
+}

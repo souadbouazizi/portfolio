@@ -2,7 +2,7 @@
   position: relative;
   background-color: transparent;
   border: solid 2px var(--color-primary);
-  padding: calc(var(--spacing-sm) * 1.5) calc(var(--spacing-md) * 1.5);
+  padding: calc(var(--spacing-sm) * 1) calc(var(--spacing-md) * 1);
   border-radius: var(--radius);
   cursor: pointer;
   display: inline-flex;

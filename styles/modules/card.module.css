@@ -41,7 +41,7 @@
       width: 100%;
       height: 100%;
     }
-
+   
     h3 {
       color: var(--color-text);
       font-size: var(--font-size-md);
@@ -79,4 +79,15 @@
       align-self: flex-end;
     }
   }
+  & .titleCard {
+    display: flex  ;
+    justify-content: space-between;
+  }
+  & .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+  }
 }
+

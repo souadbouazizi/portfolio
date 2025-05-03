@@ -59,7 +59,7 @@ export const Projects: Project[] = [
     description:"Caffee House is a warm and welcoming place where coffee lovers can relax, connect, and enjoy delicious moments. We serve a variety of freshly brewed coffees, teas, and homemade pastries, all prepared with love and care. Whether you're meeting friends, working remotely, or simply taking a break, Caffee House offers the perfect cozy atmosphere. Every visit is a new experience of comfort, flavor, and good vibes."
   },
   {
-      title: "Restaucoffee",
+      title: "Restau coffee",
        thumbnail: "/assets/restcafe.jpg",
       url: "https://souadbouazizi.github.io/restaucoffee/",
        description:"RestauCoffee combines the best of a cozy café and a delicious restaurant. We offer freshly brewed coffee, gourmet meals, homemade desserts, and a warm, relaxing atmosphere. Whether you're here for a quick coffee, a hearty lunch, or a sweet treat, RestauCoffee is the perfect place to unwind and enjoy good flavors. With friendly service and a passion for quality, every visit to RestauCoffee feels like a special moment."
@@ -114,7 +114,7 @@ export const Info = {
     },
     {
       title: "Skills",
-      details: "HTML5, CSS3, Bootstrap, TailwindCSS,  JS, TypeScript, Nodejs, NextJs"
+      details: "HTML5, CSS3, Bootstrap, TailwindCSS,  JS, TypeScript, Reactjs, Nodejs, NextJs"
     }
   ]
 }
