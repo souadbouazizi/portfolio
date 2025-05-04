@@ -93,7 +93,7 @@ export const Projects: Project[] = [
 
 
 export const Info = {
-  name: "Souad BOUAZIZI",
+  name: "Souad     BOUAZIZI",
   title: "front end developer",
   description: "A brief description about yourself.",
   email: "your@email",

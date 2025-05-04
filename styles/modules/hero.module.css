@@ -1,8 +1,117 @@
-
-
-.heroSection{
-    background-image: url(/assets/hero.jpg); 
+.heroSection {
+    position: relative;
+    background-image: url("/assets/hero.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    
+
+    & h1{
+        font-size: 3rem;
+    }
+
+    & .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        z-index: 3;
+    }
+}
+
+/* animation titre */
+/* h1 animation */
+.animatedTitle {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLetter 3s ease forwards infinite;
+  }
+  
+  @keyframes fadeInLetter {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* paragraph and button animation */
+  .fadeInBottom {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards ;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+/* BEFORE ELEMENT */
+.heroSection::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: url("/assets/Img-before.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    animation: floatBefore 6s ease-in-out infinite;
+    z-index: 2;
+    opacity: 0; /* default opacity */
+}
+
+/* AFTER ELEMENT */
+.heroSection::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/Img-after.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    bottom: 0;
+    left: 0;
+    animation: floatAfter 8s ease-in-out infinite;
+    z-index: 1;
+    opacity: 0; /* default opacity */
+}
+
+@keyframes floatBefore {
+    0%, 100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-70%) scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatAfter {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(15px) scale(1.5);
+        opacity: 1;
+    }
 }
