@@ -1,117 +1,143 @@
 .heroSection {
-    position: relative;
-    background-image: url("/assets/hero.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 1;
-    
+  position: relative;
+  background-image: url("/assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 1rem;
+  z-index: 1;
 
-    & h1{
-        font-size: 3rem;
-    }
+  & h1 {
+    font-size: 3rem;
+  }
 
-    & .cta {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        justify-content: center;
-        z-index: 3;
+  & .cta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    z-index: 3;
+  }
+
+  @media (max-width: 991px) {
+    & h1 {
+      font-size: 2rem;
     }
+  }
 }
 
-/* animation titre */
-/* h1 animation */
+/* Titre principal animé */
 .animatedTitle {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .letter {
-    display: inline-block;
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInLetter 3s ease forwards infinite;
-  }
-  
-  @keyframes fadeInLetter {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* paragraph and button animation */
-  .fadeInBottom {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards ;
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-
-/* BEFORE ELEMENT */
-.heroSection::before {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-image: url("/assets/Img-before.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    animation: floatBefore 6s ease-in-out infinite;
-    z-index: 2;
-    opacity: 0; /* default opacity */
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
-/* AFTER ELEMENT */
-.heroSection::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("/assets/Img-after.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+/* Chaque lettre */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-primary);
+  transform: translateX(-50px) rotate(-15deg);
+  animation: letterIn 2s ease forwards;
+}
 
-    bottom: 0;
-    left: 0;
-    animation: floatAfter 8s ease-in-out infinite;
-    z-index: 1;
-    opacity: 0; /* default opacity */
+/* Ajouter un délai progressif à chaque lettre en JS ou dans ton HTML */
+.letter:nth-child(1) { animation-delay: 0s; }
+.letter:nth-child(2) { animation-delay: 0.1s; }
+.letter:nth-child(3) { animation-delay: 0.2s; }
+/* etc. */
+
+@keyframes letterIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) rotate(-15deg);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-primary);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-primary);
+  }
+  100% {
+    opacity: 1;
+    color: var(--color-primary);
+    -webkit-text-stroke: 0 transparent;
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+/* Fade-in en bas */
+.fadeInBottom {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pseudo-éléments décoratifs */
+.heroSection::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url("/assets/Img-before.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  animation: floatBefore 6s ease-in-out infinite;
+  z-index: 2;
+  opacity: 0;
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/Img-after.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  animation: floatAfter 8s ease-in-out infinite;
+  z-index: 1;
+  opacity: 0;
 }
 
 @keyframes floatBefore {
-    0%, 100% {
-        transform: translateY(-50%) scale(1);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(-70%) scale(1.1);
-        opacity: 1;
-    }
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-70%) scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes floatAfter {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(15px) scale(1.5);
-        opacity: 1;
-    }
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(30px) scale(1);
+    opacity: 1;
+  }
 }

@@ -7,7 +7,7 @@ const Contact = () => (
     <div className={styles.block}>
       <div className={styles.info}>
         <Image
-          src="/images/say-hi.svg"
+          src="/assets/say-hi.svg"
           alt="Say Hi"
           fill
           priority
