@@ -25,6 +25,11 @@
       font-size: 2rem;
     }
   }
+  @media (max-width: 768px) {
+    & h1 {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 /* Titre principal animé */
@@ -42,7 +47,7 @@
   opacity: 0;
   color: transparent;
   -webkit-text-stroke: 1px var(--color-primary);
-  transform: translateX(-50px) rotate(-15deg);
+  transform: translateY(-50px) rotate(-25deg);
   animation: letterIn 2s ease forwards;
 }
 
@@ -55,13 +60,13 @@
 @keyframes letterIn {
   0% {
     opacity: 0;
-    transform: translateX(-50px) rotate(-15deg);
+    transform: translateY(-50px) rotate(-25deg);
     color: transparent;
     -webkit-text-stroke: 1px var(--color-primary);
   }
   50% {
     opacity: 1;
-    transform: translateX(0px) rotate(0deg);
+    transform: translateY(0px) rotate(15deg);
     color: transparent;
     -webkit-text-stroke: 1px var(--color-primary);
   }
@@ -69,7 +74,7 @@
     opacity: 1;
     color: var(--color-primary);
     -webkit-text-stroke: 0 transparent;
-    transform: translateX(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg);
   }
 }
 
@@ -140,4 +145,13 @@
     transform: translateY(30px) scale(1);
     opacity: 1;
   }
+}
+
+@media (max-width: 768px) {
+  .heroSection::before {
+    width: 250px !important;
+    height: 250px !important;
+    right: 0rem !important; }
+
+  
 }

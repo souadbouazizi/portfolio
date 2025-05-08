@@ -116,10 +116,14 @@
     }
 
     & .info img {
-      width: 80px !important;
-      transform: translate(-50%, 0%) scale(0.9) !important;
+      position: relative !important;
+      width: 300px !important;
+      transform: translate(-50%, 0) scale(0.9) !important;
+      left: 50% !important;
     }
-
+    & h2, p {
+      margin-left: 0 !important;
+      }
     & div[data-slot="contact-form"] {
       padding: var(--spacing-sm);
     }

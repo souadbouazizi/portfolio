@@ -80,4 +80,13 @@
   .icon {
     margin-left: calc(var(--spacing-md) * 1.25);
   }
+
+  @media (max-width: 768px) {
+    padding: calc(var(--spacing-sm) * 1.5) calc(var(--spacing-lg) * 0.75);
+    font-size: calc(var(--font-size-sm) * 1);
+
+    .icon {
+      margin-left: calc(var(--spacing-md) * 1);
+    }
+  }
 }

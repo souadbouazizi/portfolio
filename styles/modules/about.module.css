@@ -145,3 +145,16 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+
+
+  .right {
+      & .image {
+        width: 250px !important;
+      }
+    }
+
+
+}
