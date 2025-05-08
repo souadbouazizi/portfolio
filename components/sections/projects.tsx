@@ -18,15 +18,9 @@ const Projects = () => (
     <h2 className={styles.title}>Our projects</h2>
     <div className={styles["projects-grid"]}>
       {ProjectsData.map((project, index) => (
-         <MotionDiv
-         key={index}
-         variants={index % 2 === 0 ? slideLeft : slideRight} // Appliquer une animation différente par projet
-         initial="hidden"
-         whileInView="visible"
-         viewport={{ once: true, amount: 0.2 }}
-       >
+         
         <Card key={index} {...project} />
-        </MotionDiv>
+        
       ))}
     </div>
     </MotionDiv>

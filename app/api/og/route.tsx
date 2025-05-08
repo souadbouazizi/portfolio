@@ -9,7 +9,7 @@ export async function GET(request: Request) {
 
   // Example of loading an image
   const imageData = await fetch(
-    new URL("@/public/images/og-image.svg", import.meta.url)
+    new URL("@/public/assets/og-image.svg", import.meta.url)
   ).then((res) => res.arrayBuffer())
 
   // Example of loading a font
