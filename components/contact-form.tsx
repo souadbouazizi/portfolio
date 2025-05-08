@@ -34,7 +34,7 @@ export function ContactForm() {
         <Input id="email" name="email" type="email" required uiSize="medium" placeholder="E-mail" />
 
         <Label htmlFor="message" size="small">Message</Label>
-        <TextArea id="message" name="message" placeholder="Message" required/>
+        <TextArea rows={5} id="message" name="message" placeholder="Message" required/>
 
         <Button  type="submit" title={isPending ? "Sending..." : "Send"} variant="primary" size="medium" disabled={isPending} />
       </form>
