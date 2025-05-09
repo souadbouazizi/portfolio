@@ -1,13 +1,29 @@
-import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
-import { Info } from "@/lib/data"
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { Info } from "@/lib/data";
 import styles from '@/styles/modules/hero.module.css';
+import Image from 'next/image';
 
 const Hero = () => {
   const title = Info.name;
 
   return (
     <section id="hero" className={styles.heroSection}>
+     
+
+      
+      <div style={{width:'600px'}}>
+        <Image
+          src="/assets/hero-img.svg"
+          alt="hero"
+          layout="responsive"
+          width={400}  
+          height={200}  
+          priority
+                  />
+  
+      </div>
+
       <div className={styles.cta}>
         <h1 className={styles.animatedTitle}>
           {title.split("").map((letter, index) => (
@@ -21,7 +37,10 @@ const Hero = () => {
           ))}
         </h1>
 
-        <p className={styles.fadeInBottom} style={{ animationDelay: `${title.length * 0.1 + 0.5}s` }}>
+        <p
+          className={styles.fadeInBottom}
+          style={{ animationDelay: `${title.length * 0.1 + 0.5}s` }}
+        >
           Passionate about developing modern and intuitive interfaces.
           <br />
           Specialized in React.js and front-end technologies.
@@ -36,6 +55,9 @@ const Hero = () => {
           <Button title="download cv" icon={Download} size="large" />
         </a>
       </div>
+
+  
+
     </section>
   );
 };

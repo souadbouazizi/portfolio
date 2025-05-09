@@ -111,10 +111,6 @@ export const Info = {
     {
       title: "Performance Optimization",
       details: "Improve page load speed, reduce resource usage, and ensure smooth user experience through techniques like lazy loading, code splitting, and efficient asset management."
-    },
-    {
-      title: "Skills",
-      details: "HTML5, CSS3, Bootstrap, TailwindCSS,  JS, TypeScript, Reactjs, Nodejs, NextJs"
     }
   ]
 }
