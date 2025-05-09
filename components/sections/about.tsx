@@ -27,8 +27,18 @@ const fadeInRight = {
     transition: { duration: 0.8, ease: "easeOut" },
   },
 }
-
-const About = () => (
+const zoomInOut = {
+  hidden: { opacity: 0, x: 50 },  
+  visible: {                     
+    opacity: 1,                  
+    x: 0,                        
+    transition: {                
+      duration: 0.8,             
+      ease: "easeOut",            
+    },
+  },
+}
+const About = () => (    
   <section id="about">
     <div className={styles.container}>
     <MotionDiv
@@ -69,6 +79,11 @@ const About = () => (
 
       
     </div>
+    <MotionDiv
+          variants={zoomInOut}
+          initial="hidden"
+          animate="visible"
+        >
     <h2 className={styles.title}>skills</h2>
     <div className={styles.skills}>
       <FaHtml5 title="HTML5"  style={{ fontSize: "6rem" }}/>
@@ -83,9 +98,8 @@ const About = () => (
       <SiAdobephotoshop title="Adobe Photoshop"  style={{ fontSize: "6rem" }}/>
       <SiFigma title="Figma"  style={{ fontSize: "6rem" }}/>
       <SiAdobexd title="Adobe XD"   style={{ fontSize: "6rem" }}/>
-
-
-</div>
+       </div>
+</MotionDiv>
   </section>
 )
 
