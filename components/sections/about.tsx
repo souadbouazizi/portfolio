@@ -6,7 +6,7 @@ import { Info } from "@/lib/data"
 import { Button } from "@/components/ui/button"
 import { Accordion } from "@/components/ui/accordion"
 import MotionDiv from '@/components/ui/MotionDiv'
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact,  FaNodeJs } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss, SiNextdotjs, SiAdobeillustrator, SiAdobephotoshop, SiFigma, SiAdobexd } from "react-icons/si";
 
 // Définition des animations
@@ -86,21 +86,22 @@ const About = () => (
         >
     <h2 className={styles.title}>skills</h2>
     <div className={styles.skills}>
-      <FaHtml5 title="HTML5"  style={{ fontSize: "6rem" }}/>
-      <FaCss3Alt title="CSS3"  style={{ fontSize: "6rem" }}/>
-      <FaJsSquare title="JavaScript"  style={{ fontSize: "6rem" }}/>
-      <SiTypescript title="TypeScript"  style={{ fontSize: "6rem" }}/>
-      <FaBootstrap title="Bootstrap"  style={{ fontSize: "6rem" }}/>
-      <SiTailwindcss title="Tailwind CSS"  style={{ fontSize: "6rem" }}/>
-      <FaReact title="React"  style={{ fontSize: "6rem" }}/>
-      <SiNextdotjs title="Next.js"  style={{ fontSize: "6rem" }}/>
-      <SiAdobeillustrator title="Adobe Illustrator"  style={{ fontSize: "6rem" }}/>
-      <SiAdobephotoshop title="Adobe Photoshop"  style={{ fontSize: "6rem" }}/>
-      <SiFigma title="Figma"  style={{ fontSize: "6rem" }}/>
-      <SiAdobexd title="Adobe XD"   style={{ fontSize: "6rem" }}/>
+      <FaHtml5 title="HTML5" size={60} color="#dd4b25"  />
+      <FaCss3Alt title="CSS3" size={60} color="#254bdd" />
+      <FaJsSquare title="JavaScript" size={60} color="#efd81d" />
+      <SiTypescript title="TypeScript" size={60} color="#2f74c0" />
+      <FaBootstrap title="Bootstrap" size={60} color="#7952b3" />
+      <SiTailwindcss title="Tailwind CSS" size={60} color="#00bcff" />
+      <FaReact title="React" size={60} color="#0074a6" />
+      <SiNextdotjs title="Next.js" size={60} color="#f1f1f1" />
+      <FaNodeJs title="Node.js" size={60} color="#68A063" />
+      <SiAdobeillustrator title="Adobe Illustrator" size={60} color="#e78b00" />
+      <SiAdobephotoshop title="Adobe Photoshop" size={60} color="#2fa3f7" />
+      <SiFigma title="Figma" size={60} color="#F24E1E" />
+      <SiAdobexd title="Adobe XD" size={60} color="#f75eee"  />
        </div>
-</MotionDiv>
-  </section>
+      </MotionDiv>
+   </section>
 )
 
 export { About }
