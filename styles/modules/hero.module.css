@@ -12,6 +12,9 @@
  justify-content: space-between;
  @media (max-width: 768px) {
   flex-flow: column;
+  height: 600px !important;
+  padding: 0 1rem;
+  justify-content: start;
  }
   & h1 {
     font-size: 3rem;
@@ -20,7 +23,7 @@
   & .cta {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     z-index: 3;
   }
@@ -34,6 +37,14 @@
     
     & h1 {
       font-size: 1.3rem;
+    }
+    & div:first-child{
+      width: 100% !important;
+      height: 330px !important;
+    }
+    & img{
+      width: 400px !important;
+      height: 400px;
     }
   }
 }
