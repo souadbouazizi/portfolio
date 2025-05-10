@@ -76,12 +76,12 @@
   }
 
   .contactForm {
-    width: 100%;
+    width: 90%;
   }
 
   
   .imageWrapper img {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 }

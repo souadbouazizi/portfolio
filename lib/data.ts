@@ -97,7 +97,7 @@ export const Info = {
   title: "front end developer",
   description: "A brief description about yourself.",
   email: "your@email",
-  image: "/images/profile.png", 
+  image: "/assets/profile.png", 
   bio: "I am a Front-End Developer with 3.5 years of experience building responsive and scalable web applications using React, Next.js, and Tailwind CSS. I specialize in clean UI design, performance optimization, and delivering seamless user experiences with tools like Bootstrap and modern CSS frameworks..",
   experience: [
     {
