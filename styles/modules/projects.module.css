@@ -17,10 +17,8 @@
 }
 
 .title {
-  margin-top: 8rem;
   font-size: var(--font-size-lg);
-  @media (max-width: 768px) {
-    margin-top: 1rem;
+  @media (max-width: 768px) {    
   font-size: var(--font-size-md) !important;
   }
 }
