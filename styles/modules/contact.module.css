@@ -6,6 +6,9 @@
   background: var(--color-card);
   border-radius: var(--radius);
   box-shadow: 0 4px 24px rgba(60, 60, 100, 0.08), 0 1.5px 4px var(--color-muted);
+  @media (max-width: 768px) {
+      margin-bottom: 2rem;
+  }
 }
 
 .block {
