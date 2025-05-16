@@ -1,9 +1,13 @@
+
+
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { ptSans, montserrat } from "@/lib/fonts"
 import type { Metadata } from "next"
 
 import "@/styles/globals.css"
+import { ModeToggle } from "@/components/ui/modeToggle"
+
 
 export const metadata: Metadata = {
   title: "Souad's Portfolio",
@@ -50,9 +54,12 @@ export default function RootLayout({
   <link rel="icon" href="/assets/favicon.ico" />
 </head>
       <body className={`${ptSans.variable} ${montserrat.variable}`}>
+       
+        <ModeToggle/>
         <Header />
         {children}
         <Footer />
+       
       </body>
     </html>
   )

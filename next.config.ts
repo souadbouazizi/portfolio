@@ -1,23 +1,33 @@
-import type { NextConfig } from "next"
-import createMDX from "@next/mdx"
+// next.config.js
+const createMDX = require("@next/mdx")();
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   experimental: {
     viewTransition: true,
-    mdxRs: true
+    mdxRs: true,
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   turbopack: {
-    resolveExtensions: [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
-  }
-}
+    resolveExtensions: [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"],
+  },
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false,
+        path: false,
+        os: false,
+      };
 
-const withMDX = createMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: []
-  }
-})
+      // Ajout pour gérer le prefixe "node:" dans imports
+      config.resolve.alias = {
+        ...(config.resolve.alias || {}),
+        "node:fs": false,
+        "node:path": false,
+        "node:os": false,
+      };
+    }
+    return config;
+  },
+};
 
-export default withMDX(nextConfig)
+module.exports = createMDX(nextConfig);

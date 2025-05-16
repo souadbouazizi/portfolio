@@ -4,8 +4,14 @@ import { useState } from "react"
 import Link from "next/link"
 import { useSectionScroll, useNavSection } from "@/lib/hooks"
 import { NavLinks } from "@/lib/data"
+import { ModeToggle } from "./ui/modeToggle"
 
-const Header = () => {
+interface HeaderProps {
+  toggleTheme: () => void
+  theme: string
+}
+
+const Header = ({ theme, toggleTheme }: HeaderProps) => {
   const [active, setActive] = useSectionScroll()
   const navToSection = useNavSection()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -13,14 +19,14 @@ const Header = () => {
   const handleNavLinkClick = (href: string) => {
     setActive(href)
     navToSection(href)
-    setMobileMenuOpen(false) // Close menu after click
+    setMobileMenuOpen(false)
   }
 
   return (
     <header className="site-header">
       <span className="logo-wrapper">
         <Link href="/">
-          <img src="/assets/logo.png" alt="Souad bouazizi" className="logo" />
+          <img src="/assets/logo.png" alt="Souad Bouazizi" className="logo" />
         </Link>
         <button
           className="hamburger"
@@ -53,6 +59,9 @@ const Header = () => {
           Blog
         </Link>
       </nav>
+
+    
+      <ModeToggle/>
     </header>
   )
 }
