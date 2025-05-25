@@ -6,7 +6,7 @@ import { ptSans, montserrat } from "@/lib/fonts"
 import type { Metadata } from "next"
 
 import "@/styles/globals.css"
-import { ModeToggle } from "@/components/ui/modeToggle"
+
 
 
 export const metadata: Metadata = {
@@ -55,7 +55,7 @@ export default function RootLayout({
 </head>
       <body className={`${ptSans.variable} ${montserrat.variable}`}>
        
-        <ModeToggle/>
+       
         <Header />
         {children}
         <Footer />
