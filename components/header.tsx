@@ -23,6 +23,7 @@ const Header = () => {
           <img src="/assets/logo.png" alt="Souad bouazizi" className="logo" />
         </Link>
         <button
+        type="button"
           className="hamburger"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
