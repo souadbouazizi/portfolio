@@ -47,7 +47,7 @@ const Hero = () => {
         </p>
 
         <a
-          href="/assets/cv.pdf"
+          href="/assets/CV-SB.pdf"
           target="_blank"
           className={styles.fadeInBottom}
           style={{ animationDelay: `${title.length * 0.1 + 1}s` }}
