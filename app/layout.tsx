@@ -42,13 +42,13 @@ export default function RootLayout({
   <meta property="og:description" content="I'm a front-end developer specializing in React.js. Check out my projects and skills." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://myportfolio.com" />
-  <meta property="og:image" content="https://myportfolio.vercel.app/imgfile/hero.jpg" />
+  <meta property="og:image" content="https://myportfolio.vercel.app/assets/hero.jpg" />
 
   {/* <!-- Twitter Card --> */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Front-End React Developer | Souad BOUAZIZI Portfolio" />
   <meta name="twitter:description" content="Passionate React developer. Discover my projects and expertise." />
-  <meta name="twitter:image" content="https://myportfolio.vercel.app/imgfile/hero.jpg" />
+  <meta name="twitter:image" content="https://myportfolio.vercel.app/assets/hero.jpg" />
 
   {/* <!-- Favicon (optionnel mais recommandé) --> */}
   <link rel="icon" href="/assets/favicon.ico" />
