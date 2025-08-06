@@ -33,7 +33,7 @@ export default function RootLayout({
   <meta name="keywords" content="front-end developer, React, React.js, portfolio, JavaScript, web developer, HTML, CSS, Bootstrap, TailwindCSS, projets web" />
  <meta property="og:type" content="website" />
 <meta property="og:url" content="https://souadbouaziziportfolio.vercel.app/" />
-<meta property="og:image" content="https://souadbouaziziportfolio.vercel.app/assets/hero.jpg" />
+<meta property="og:image" content="https://souadbouaziziportfolio.vercel.app/assets/profile.png" />
   <meta name="author" content="Souad BOUAZIZI" />
   <meta name="robots" content="index, follow" />
 
